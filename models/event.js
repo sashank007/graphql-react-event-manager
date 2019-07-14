@@ -1,7 +1,5 @@
 const mongoose = require("mongoose");
 
-//constructor function
-//schemas are building blocks added by mongoose
 const Schema = mongoose.Schema;
 
 const eventSchema = new Schema({
@@ -27,5 +25,4 @@ const eventSchema = new Schema({
   }
 });
 
-//model is blue print that incorporates the plan
 module.exports = mongoose.model("Event", eventSchema);

@@ -11,7 +11,6 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
-  //ref is a link to the other `Event` model
   createdEvents: [
     {
       type: Schema.Types.ObjectId,
