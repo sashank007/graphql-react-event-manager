@@ -12,7 +12,7 @@ const MainNavigation = props => {
           return (
             <header className="main-navigation">
               <div className="main-navigation-logo">
-                <h1>Happenings Around You</h1>
+                <h1>Tempe Happenings</h1>
               </div>
 
               <nav className="main-nav-items">

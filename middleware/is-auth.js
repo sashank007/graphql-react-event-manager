@@ -9,8 +9,9 @@ module.exports = (req, res, next) => {
   }
   const token = authHeader.split(" ")[1];
   console.log("my token : ", token);
-  if (!token || token === "") {
+  if (token === "") {
     req.isAuth = false;
+    console.log("token is empty");
     return next();
   }
   let decodedToken;
@@ -21,10 +22,12 @@ module.exports = (req, res, next) => {
     req.isAuth = false;
     return next();
   }
+  console.log("decodedToken", decodedToken);
   if (!decodedToken) {
     req.isAuth = false;
     return next();
   }
+  console.log("authenticated");
   req.isAuth = true;
   req.userId = decodedToken.userId;
   next();

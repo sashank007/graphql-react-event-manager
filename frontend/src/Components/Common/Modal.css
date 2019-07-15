@@ -1,12 +1,14 @@
 .modal {
-  width: 50rem;
-  width: 90%;
-  max-width: 90%;
+  /* width: 80rem; */
+  /* width: 90%; */
+  max-width: 100%;
   background: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   position: fixed;
   top: 20vh;
-  left: 5%;
+  left: 33vw;
+  margin: auto 0;
+  /* left: 15%; */
 }
 
 @media (min-width: 760px) {
@@ -37,4 +39,26 @@
   padding: 0.5rem;
   border-radius: 2px;
   margin: 0.5rem;
+}
+
+#title {
+  height: 1.5rem;
+  width: 50%;
+  margin: 0 auto;
+}
+#price {
+  height: 1.5rem;
+  width: 50%;
+  margin: 0 auto;
+}
+#date {
+  height: 1.5rem;
+  width: 50%;
+  margin: 0 auto;
+}
+
+#description {
+  height: 4rem;
+  width: 70%;
+  margin: 0 auto;
 }

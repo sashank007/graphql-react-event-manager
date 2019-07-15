@@ -1,7 +1,11 @@
 .auth-form {
   width: 40rem;
   max-width: 80%;
-  margin: 25rem auto;
+  margin: 5rem auto;
+
+  padding-left: 5rem;
+  padding: 2rem;
+  border-radius: 5px;
 }
 .form-control label,
 .form-control input {
@@ -10,25 +14,88 @@
 }
 .form-control label {
   margin-bottom: 0.5rem;
+  color: #000000;
 }
+
 .form-control {
   margin-bottom: 1rem;
 }
 
+#email-label {
+  text-align: left;
+  font-size: 20px;
+  margin-top: 1rem;
+  margin-left: 4rem;
+  color: white;
+  margin-bottom: 1rem;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono",
+    "Lucida Console", Monaco, monospace;
+}
+#password-label {
+  text-align: left;
+  font-size: 20px;
+  margin-left: 4rem;
+  color: white;
+  margin-bottom: 1rem;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono",
+    "Lucida Console", Monaco, monospace;
+  margin-top: 2rem;
+}
 .form-actions button {
-  background: #df4242;
+  background: rgb(176, 37, 146);
   font: inherit;
+  border-radius: 15px;
+  height: 70px;
+  margin-top: 2rem;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono",
+    "Lucida Console", Monaco, monospace;
+  width: 200px;
+  font-size: 30px;
+  margin: 0 auto;
   border: 1px solid #000000;
   padding: 0.25rem 1rem;
-  border-radius: 3px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.26);
   margin-right: 1rem;
   color: white;
   cursor: pointer;
 }
 
+.form-actions {
+  padding: 1rem;
+  margin: 1rem;
+}
 .form-actions button:hover,
 .form-actions button:active {
-  background: #df4242;
+  color: black;
   border-color: white;
+}
+
+#email-login {
+  height: 4rem;
+  width: 80%;
+  border-radius: 5px;
+  box-shadow: 0, 0, 0, 0.25rem;
+  margin: 0 auto;
+  font-size: 32px;
+}
+
+#password {
+  height: 4rem;
+  width: 80%;
+  border-radius: 5px;
+  box-shadow: 0, 0, 0, 0.25rem;
+  margin: 0 auto;
+  font-size: 32px;
+}
+
+h3 {
+  color: White;
+}
+
+#switch {
+  color: rgba(255, 255, 255, 0.548);
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0rem;
+  padding: 0;
 }

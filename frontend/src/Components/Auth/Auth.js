@@ -2,10 +2,18 @@ import React, { useState, useRef, useContext } from "react";
 import "./Auth.css";
 import UserContext from "../../context/auth-context";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const graphQLUri = "http://localhost:8000/graphql";
 const Auth = () => {
   const emailEl = useRef(null);
   const passEl = useRef(null);
+
+  const notify = () => {
+    console.log("notif");
+    toast.error("Error logging in!");
+  };
 
   const user = useContext(UserContext);
 
@@ -60,8 +68,11 @@ const Auth = () => {
     })
       .then(res => {
         if (res.status !== 200 && res.status !== 201) {
+          console.log("failed loggin in");
+          notify();
           throw new Error("Failed");
         }
+
         return res.json();
       })
       .then(resData => {
@@ -75,37 +86,54 @@ const Auth = () => {
         }
       })
       .catch(e => {
+        notify();
         console.log(e);
       });
   };
   return (
     <div>
       <form className="auth-form" onSubmit={submitForm}>
+        <h3>
+          {isLogin ? <span>ACCOUNT LOGIN</span> : <span>ACCOUNT SIGNUP</span>}
+        </h3>
         <div className="form-control">
-          <label htmlFor="email">e-mail</label>
+          <label htmlFor="email" id="email-label">
+            E-Mail
+          </label>
           <input type="email" id="email-login" ref={emailEl} />
         </div>
         <div className="form-control">
-          <label htmlFor="password">password</label>
+          <label htmlFor="password" id="password-label">
+            Password
+          </label>
           <input type="password" id="password" ref={passEl} />
         </div>
         <div className="form-actions">
           {isLogin ? (
-            <button type="login">Login</button>
+            // <button type="login">Login</button>
+            <a class="button" onClick={submitForm}>
+              <span class="away">Login</span>
+              <span class="over">Let's Go!</span>
+            </a>
           ) : (
-            <button type="signup">Signup</button>
+            // <button type="signup">Signup</button>
+            <a class="button" onClick={submitForm}>
+              <span class="away">Signup</span>
+              <span class="over">Let's Go!</span>
+            </a>
           )}
         </div>
         {isLogin ? (
-          <button className="switch" onClick={switchMode}>
-            (Not signed up yet?
-          </button>
+          <a id="switch" onClick={switchMode}>
+            Not signed up yet?
+          </a>
         ) : (
-          <button className="switch" onClick={switchMode}>
+          <a id="switch" onClick={switchMode}>
             Already signed up?
-          </button>
+          </a>
         )}
       </form>
+      <ToastContainer />
     </div>
   );
 };
