@@ -1,7 +1,8 @@
 .auth-form {
-  width: 40rem;
+  width: 30rem;
   max-width: 80%;
-  margin: 5rem auto;
+  margin: 7rem auto;
+  border: 0.5px solid gray;
 
   padding-left: 5rem;
   padding: 2rem;
@@ -23,7 +24,7 @@
 
 #email-label {
   text-align: left;
-  font-size: 20px;
+  font-size: 16px;
   margin-top: 1rem;
   margin-left: 4rem;
   color: white;
@@ -33,7 +34,7 @@
 }
 #password-label {
   text-align: left;
-  font-size: 20px;
+  font-size: 16px;
   margin-left: 4rem;
   color: white;
   margin-bottom: 1rem;
@@ -71,25 +72,30 @@
 }
 
 #email-login {
-  height: 4rem;
-  width: 80%;
+  height: 2rem;
+  width: 70%;
   border-radius: 5px;
   box-shadow: 0, 0, 0, 0.25rem;
   margin: 0 auto;
-  font-size: 32px;
+  font-size: 16px;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono",
+    "Lucida Console", Monaco, monospace;
 }
 
 #password {
-  height: 4rem;
-  width: 80%;
+  height: 2rem;
+  width: 70%;
   border-radius: 5px;
   box-shadow: 0, 0, 0, 0.25rem;
   margin: 0 auto;
-  font-size: 32px;
+  font-size: 16px;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono",
+    "Lucida Console", Monaco, monospace;
 }
 
 h3 {
   color: White;
+  font-family: "Barriecito", cursive;
 }
 
 #switch {

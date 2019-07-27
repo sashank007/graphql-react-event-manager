@@ -93,9 +93,7 @@ const Auth = () => {
   return (
     <div>
       <form className="auth-form" onSubmit={submitForm}>
-        <h3>
-          {isLogin ? <span>ACCOUNT LOGIN</span> : <span>ACCOUNT SIGNUP</span>}
-        </h3>
+        <h3>Tempe Happenings</h3>
         <div className="form-control">
           <label htmlFor="email" id="email-label">
             E-Mail

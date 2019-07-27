@@ -33,6 +33,16 @@
 }
 
 .main-content {
-  margin: 1rem;
-  width: 100%;
+  width: 100vw;
+  /* background-image: url("./assets/sunset.jpg"); */
+
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+
+img {
+  opacity: 0.5;
 }

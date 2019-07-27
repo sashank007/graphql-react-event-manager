@@ -1,0 +1,27 @@
+.searchBar {
+  top: 32%;
+  position: absolute;
+  left: 25%;
+}
+
+.searchRoot {
+  /* background-image: url("../../assets/music-fest.jpg");
+  background-repeat: no-repeat;
+  background-position: center; */
+  width: 100vw;
+  height: 100vh;
+  margin: 0%;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("../../assets/music-fest.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -5,6 +5,7 @@ import Bookings from "./Components/Bookings/Bookings";
 import Events from "./Components/Events/Events";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import MainNavigation from "./Components/Navigation/MainNavigation";
+import Search from "./Components/Search/Search";
 
 import AuthContext from "./context/auth-context";
 function App() {
@@ -36,18 +37,13 @@ function App() {
             <MainNavigation />
             <main className="main-content">
               <Switch>
-                {!loginToken && <Redirect from="/" to="/events" exact />}
-
+                {loginToken && <Redirect from="/" to="/events" exact />}
                 {loginToken && <Redirect from="/auth" to="/events" exact />}
-                {!loginToken && <Redirect from="/events" to="/auth" exact />}
-
-                {!loginToken && <Redirect from="/bookings" to="/auth" exact />}
-
                 {!loginToken && <Route path="/auth" component={Auth} />}
-                {!loginToken && <Redirect to="/auth" exact />}
-
                 <Route path="/events" component={Events} />
-                {!loginToken && <Route path="/bookings" component={Bookings} />}
+                <Route path="/search" component={Search} />
+                {loginToken && <Route path="/bookings" component={Bookings} />}
+                {!loginToken && <Redirect to="/auth" exact />}
               </Switch>
             </main>
           </AuthContext.Provider>

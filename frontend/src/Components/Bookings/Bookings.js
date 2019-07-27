@@ -65,7 +65,7 @@ const Bookings = () => {
   const renderBookings = () => {
     return bookings.map(booking => {
       return (
-        <ul key={booking._id}>
+        <ul key={booking._ids}>
           <li>{booking.event.title}</li>
         </ul>
       );
